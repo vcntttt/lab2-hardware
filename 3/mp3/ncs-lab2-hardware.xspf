@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<playlist xmlns="http://xspf.org/ns/0/" xmlns:aimp="http://www.aimp.ru/playlist/ns/0/" version="1">
+	<title>ncs-lab2-hardware</title>
+	<identifier>{CA0C375B-E90A-4D08-88A8-BA61CDEDCA0F}</identifier>
+	<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/~ncs-lab2-hardware.xspf</location>
+	<extension application="http://www.aimp.ru/playlist/summary/0">
+		<aimp:prop name="ID">{CA0C375B-E90A-4D08-88A8-BA61CDEDCA0F}</aimp:prop>
+		<aimp:prop name="Name">ncs-lab2-hardware</aimp:prop>
+		<aimp:prop name="NameIsAutoSet">0</aimp:prop>
+		<aimp:prop name="ContentDuration">2268109</aimp:prop>
+		<aimp:prop name="ContentFiles">10</aimp:prop>
+		<aimp:prop name="ContentSize">72579880</aimp:prop>
+		<aimp:prop name="PlaybackCursor">0</aimp:prop>
+		<aimp:prop name="PlaybackCursorAutoBookmark">0</aimp:prop>
+		<aimp:prop name="Shuffled">0</aimp:prop>
+	</extension>
+	<extension application="http://www.aimp.ru/playlist/settings/0">
+		<aimp:prop name="Flags">2047</aimp:prop>
+		<aimp:prop name="FormatMainLine">%IF(%Artist,%Artist - %Title,%Title)</aimp:prop>
+		<aimp:prop name="FormatSecondLine">%FileFormat :: %SampleRate, %BitRate, %FileSize</aimp:prop>
+		<aimp:prop name="GroupFormatLine">%FileDir</aimp:prop>
+	</extension>
+	<trackList>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/clockwork-by-neeraj-waves-ncs-copyright-free-music-195167.mp3</location>
+			<duration>317115</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>44100</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>10148049</aimp:size>
+				<aimp:queueIndex>0</aimp:queueIndex>
+			</extension>
+			<extension application="http://www.aimp.ru/playlist/group/0">
+				<aimp:title>C:\Users\vicen\OneDrive\Escritorio\lab2-hardware\3\mp3</aimp:title>
+				<aimp:state>1</aimp:state>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/eurosound-123988.mp3</location>
+			<duration>274547</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>44100</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>8785502</aimp:size>
+				<aimp:queueIndex>1</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/fallen-sky-no-copyright-background-music-195170.mp3</location>
+			<duration>126552</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>48000</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>4049664</aimp:size>
+				<aimp:queueIndex>2</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/free-matrix-echo-beat-for-rap-hip-hop-fun-type-beat-193907.mp3</location>
+			<duration>132552</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>48000</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>4241664</aimp:size>
+				<aimp:queueIndex>3</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/from-the-night-122836.mp3</location>
+			<duration>261381</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>44100</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>8364199</aimp:size>
+				<aimp:queueIndex>4</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/holding-on-136343.mp3</location>
+			<duration>236173</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>44100</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>7557538</aimp:size>
+				<aimp:queueIndex>5</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/solaris-123497.mp3</location>
+			<duration>293904</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>44100</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>9404917</aimp:size>
+				<aimp:queueIndex>6</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/speed-122837.mp3</location>
+			<duration>263131</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>44100</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>8420205</aimp:size>
+				<aimp:queueIndex>7</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/theme-timeless-vlog-no-copyright-music-195165.mp3</location>
+			<duration>112632</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>48000</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>3604224</aimp:size>
+				<aimp:queueIndex>8</aimp:queueIndex>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/vicen/OneDrive/Escritorio/lab2-hardware/3/mp3/time-to-on-136337.mp3</location>
+			<duration>250122</duration>
+			<meta rel="bitrate">256</meta>
+			<extension application="http://www.aimp.ru/playlist/track/0">
+				<aimp:chans>2</aimp:chans>
+				<aimp:samplerate>44100</aimp:samplerate>
+				<aimp:format>MP3</aimp:format>
+				<aimp:size>8003918</aimp:size>
+				<aimp:queueIndex>9</aimp:queueIndex>
+			</extension>
+		</track>
+	</trackList>
+</playlist>
