@@ -61,7 +61,6 @@ with wave.open(f'{wavsDir}3-DOREMIFASOLLASI({sampleRate3}Hz).wav', 'w') as waveF
 
 # Ejercicio 4
 t4 = np.arange(0, 10 * sampleRate1)
-
 signal = 8000 * np.sin(2 * np.pi * 500.0 / sampleRate1 * t4) + 8000 * np.sin(2 * np.pi * 250.0 / sampleRate1 * t4)
 
 with wave.open(f'{wavsDir}4-OndaStereo({sampleRate1}Hz).wav', 'w') as waveFile:
