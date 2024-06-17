@@ -60,14 +60,33 @@ with wave.open(f'{wavsDir}3-DOREMIFASOLLASI({sampleRate3}Hz).wav', 'w') as waveF
 
 
 # Ejercicio 4
-t4 = np.linspace(0, 10, int(sampleRate3 * 10))
-signal1 = 8000 * np.sin(2 * np.pi * 500.0 / sampleRate3 * t4 )
-signal2 = 8000 * np.sin(2 * np.pi * 250.0 / sampleRate3 * t4 )
+t4 = np.arange(0, 10 * sampleRate1)
 
-# with wave.open(f'{wavsDir}4-OndaStereo({sampleRate3}Hz).wav', 'w') as waveFile:
-#   waveFile.setnchannels(2)
-#   waveFile.setsampwidth(2)
-#   waveFile.setframerate(sampleRate3)
+signal = 8000 * np.sin(2 * np.pi * 500.0 / sampleRate1 * t4) + 8000 * np.sin(2 * np.pi * 250.0 / sampleRate1 * t4)
 
-#   for s1, s2 in zip(signal1, signal2):
-#     waveFile.writeframes(struct.pack('<hh', int(s1), int(s2)))
+with wave.open(f'{wavsDir}4-OndaStereo({sampleRate1}Hz).wav', 'w') as waveFile:
+  waveFile.setnchannels(2)
+  waveFile.setsampwidth(2)
+  waveFile.setframerate(sampleRate1)
+
+  waveData = [struct.pack('<hh', int(sample), int(sample)) for sample in signal]
+  waveFile.writeframes(b''.join(waveData))
+
+# Ejercicio 5
+lowerSignal = signal * 0.25
+with wave.open(f'{wavsDir}5-OndaStereo25%({sampleRate1}Hz).wav', 'w') as waveFile:
+  waveFile.setnchannels(2)
+  waveFile.setsampwidth(2)
+  waveFile.setframerate(sampleRate1)
+
+  waveData = [struct.pack('<hh', int(sample), int(sample)) for sample in lowerSignal]
+  waveFile.writeframes(b''.join(waveData))
+
+# Ejercicio 6
+with wave.open(f'{wavsDir}6-OndaStereoDerecho({sampleRate1}Hz).wav', 'w') as waveFile:
+  waveFile.setnchannels(2)
+  waveFile.setsampwidth(2)
+  waveFile.setframerate(sampleRate1)
+
+  waveData = [struct.pack('<hh', 0, int(sample)) for sample in signal]
+  waveFile.writeframes(b''.join(waveData))
