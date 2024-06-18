@@ -19,7 +19,7 @@ wavsDir = '4/wavs/'
 
 def generateWave(freq, duration, sampleRate):
   t = np.linspace(0, duration, int(sampleRate * duration))
-  waveData = 0.5 * np.sin(2 * np.pi * freq * t)
+  waveData = np.sin(2 * np.pi * freq * t)
   return waveData
 
 
@@ -61,31 +61,45 @@ with wave.open(f'{wavsDir}3-DOREMIFASOLLASI({sampleRate3}Hz).wav', 'w') as waveF
 
 # Ejercicio 4
 t4 = np.arange(0, 10 * sampleRate1)
-signal = 8000 * np.sin(2 * np.pi * 500.0 / sampleRate1 * t4) + 8000 * np.sin(2 * np.pi * 250.0 / sampleRate1 * t4)
+wave4 = 8000 * np.sin(2 * np.pi * 500.0 / sampleRate1 * t4) + 8000 * np.sin(2 * np.pi * 250.0 / sampleRate1 * t4)
 
 with wave.open(f'{wavsDir}4-OndaStereo({sampleRate1}Hz).wav', 'w') as waveFile:
   waveFile.setnchannels(2)
   waveFile.setsampwidth(2)
   waveFile.setframerate(sampleRate1)
 
-  waveData = [struct.pack('<hh', int(sample), int(sample)) for sample in signal]
+  waveData = [struct.pack('<hh', int(sample), int(sample)) for sample in wave4]
   waveFile.writeframes(b''.join(waveData))
 
 # Ejercicio 5
-lowerSignal = signal * 0.25
-with wave.open(f'{wavsDir}5-OndaStereo25%({sampleRate1}Hz).wav', 'w') as waveFile:
-  waveFile.setnchannels(2)
-  waveFile.setsampwidth(2)
-  waveFile.setframerate(sampleRate1)
+def reduceVolume(originalWAV, outputWAV, factor):
+  with wave.open(originalWAV, 'r') as originalFile:
+    params = originalFile.getparams()
+    frames = originalFile.readframes(params.nframes)
 
-  waveData = [struct.pack('<hh', int(sample), int(sample)) for sample in lowerSignal]
-  waveFile.writeframes(b''.join(waveData))
+    waveData = struct.unpack('<' + 'hh' * params.nframes, frames)
+
+    reducedWaveData = [int(sample * factor) for sample in waveData]
+
+    reducedWaveDataPacked = struct.pack('<' + 'hh' * (len(reducedWaveData) // 2), * reducedWaveData)
+
+  with wave.open(outputWAV, 'w') as reducedFile:
+    reducedFile.setparams(params)
+    reducedFile.writeframes(reducedWaveDataPacked)
+
+act4File = f'{wavsDir}4-OndaStereo({sampleRate1}Hz).wav'
+act5File = f'{wavsDir}5-OndaStereo25%({sampleRate1}Hz).wav'
+reduceVolume(act4File, act5File, 0.25)
 
 # Ejercicio 6
-with wave.open(f'{wavsDir}6-OndaStereoDerecho({sampleRate1}Hz).wav', 'w') as waveFile:
-  waveFile.setnchannels(2)
-  waveFile.setsampwidth(2)
-  waveFile.setframerate(sampleRate1)
+with wave.open(act5File, 'r') as reducedFile:
+  params = reducedFile.getparams()
+  frames = reducedFile.readframes(params.nframes)
 
-  waveData = [struct.pack('<hh', 0, int(sample)) for sample in signal]
-  waveFile.writeframes(b''.join(waveData))
+  waveData = struct.unpack('<' + 'hh' * params.nframes, frames)
+  leftChannel = waveData[0::2]
+  rightChannel = waveData[1::2]
+
+with wave.open(f'{wavsDir}6-OndaStereoDerecho({sampleRate1}Hz).wav', 'w') as waveFile:
+  waveFile.setparams(params)
+  waveFile.writeframes(b''.join([struct.pack('<hh', 0, int(sample)) for sample in rightChannel]))
